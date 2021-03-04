@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+    <table>
+        <div>
+<!--            -->
+            <form action="index.html" th:action="@{/index}">
+                <input type="text" name="searchText">
+                <button type="submit">提交</button>
+            </form>
+        </div>
+        <div><button><a href="addPerson">添加</a></button></div>
+        <div>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>gender</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+        <tr th:each="person: ${allper}">
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.stuName}"></td>
+            <td th:text="${person.stuGender}"></td>
+            <td><button type="submit"><a th:href="@{updatePerson/{id}(id=${person.id})}">修改</a></button></td>
+            <td><button type="submit"><a th:href="@{deletePerson/{id}(id=${person.id})}">删除</a></button></td>
+        </tr>
+            <tr th:each="person: ${getaPersonById}">
+                <td th:text="${person.id}"></td>
+                <td th:text="${person.stuName}"></td>
+                <td th:text="${person.stuGender}"></td>
+
+            </tr>
+        </div>
+    </table>
+</body>
+</html>

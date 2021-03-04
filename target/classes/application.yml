@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/boottest03
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: lzy1234
+
+mybatis-plus:
+  mapper-locations: classpath:mybatis/mapper/*
