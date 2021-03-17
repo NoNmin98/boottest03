@@ -19,8 +19,6 @@ class Boottest03ApplicationTests {
 
         Connection connection = dataSource.getConnection();
         System.out.println(connection);
-
-
     }
 
 }

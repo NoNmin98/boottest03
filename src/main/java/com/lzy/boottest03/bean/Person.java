@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 /**
  * @author: lzy
  * @description:
@@ -18,6 +21,7 @@ import lombok.NoArgsConstructor;
 @TableName("tbl_stu")
 public class Person {
 
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String stuName;
     private String stuGender;

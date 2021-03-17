@@ -15,8 +15,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class PersonMapperTest {
     @Autowired
     PersonMapper personMapper;
+
     @Test
-    void getPerson(){
+    void getPerson() {
         personMapper.getAllPerson();
     }
 

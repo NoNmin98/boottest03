@@ -4,6 +4,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: lzy1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 mybatis-plus:
   mapper-locations: classpath:mybatis/mapper/*
+

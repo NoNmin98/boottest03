@@ -2,27 +2,27 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lzy.boottest03.mapper.PersonMapper">
-<!--    public void getAllPerson() -->
+    <!--    public void getAllPerson() -->
     <select id="getAllPerson" resultType="com.lzy.boottest03.bean.Person">
         select * from tbl_stu
     </select>
-<!--    Person getPersonById();-->
+    <!--    Person getPersonById();-->
     <select id="getPersonById" resultType="com.lzy.boottest03.bean.Person">
         select * from tbl_stu where id=#{id}
     </select>
 
-<!--        void addAPerson(Person person);-->
+    <!--        void addAPerson(Person person);-->
     <insert id="addAPerson" useGeneratedKeys="true" keyProperty="id">
         insert into tbl_stu (`stu_name`,`stu_gender`) values (#{stuName},#{stuGender})
     </insert>
 
-<!--    void deleteAPersonById(Integer id);-->
+    <!--    void deleteAPersonById(Integer id);-->
     <delete id="deleteAPersonById">
         delete from tbl_stu where id=#{id}
     </delete>
 
-<!--   void updateAPersonById(@Param("id")Integer id,@Param("stuName")String stuName,@Param("stuGender")String stuGender);-->
-    <update id="updateAPersonById" >
+    <!--   void updateAPersonById(@Param("id")Integer id,@Param("stuName")String stuName,@Param("stuGender")String stuGender);-->
+    <update id="updateAPersonById">
         UPDATE tbl_stu set stu_name=#{stuName},stu_gender=#{stuGender} where id=#{id}
     </update>
 </mapper>
